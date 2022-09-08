@@ -1,5 +1,7 @@
 package com.pos.cifraCesar.controller;
 
+
+import com.pos.cifraCesar.service.CifraService;
 import com.pos.cifraCesar.util.CifradorCesar;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +12,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/Cifrador")
 public class CifraController {
-    final com.pos.cifraCesar.service.CifraService cifradortService;
+    final CifraService cifradortService;
 
     public CifraController(com.pos.cifraCesar.service.CifraService cifraService) {
         this.cifradortService = cifraService;
